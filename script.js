@@ -54,6 +54,11 @@ result.innerHTML = "Ciudad no encontrada";
 
 locationBtn.addEventListener("click", () => {
 
+locationBtn.disabled = true;
+locationBtn.innerText = "Cargando...";
+
+result.innerHTML = "📍 Obteniendo ubicación...";
+
 if(navigator.geolocation){
 
 navigator.geolocation.getCurrentPosition(position => {
@@ -63,8 +68,15 @@ const lon = position.coords.longitude;
 
 getWeatherByCoords(lat, lon);
 
+locationBtn.disabled = false;
+locationBtn.innerText = "📍 Usar mi ubicación";
+
 }, () => {
 result.innerHTML = "No se pudo obtener la ubicación";
+
+locationBtn.disabled = false;
+locationBtn.innerText = "📍 Usar mi ubicación";
+
 });
 
 }else{

@@ -1,0 +1,76 @@
+body{
+font-family: 'Segoe UI', sans-serif;
+background: linear-gradient(135deg, #74b9ff, #a29bfe);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+transition: background 0.5s ease;
+}
+
+.container{
+background: rgba(255,255,255,0.15);
+backdrop-filter: blur(15px);
+-webkit-backdrop-filter: blur(15px);
+padding:30px;
+border-radius:20px;
+text-align:center;
+width:320px;
+box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+color:white;
+}
+
+h1{
+font-size: 24px;
+margin-bottom:20px;
+}
+
+h2{
+font-size: 22px;
+margin-top:15px;
+}
+
+input{
+padding:10px;
+width:70%;
+border:none;
+border-radius:10px;
+outline:none;
+margin-bottom:10px;
+}
+
+button{
+padding:10px 15px;
+border:none;
+border-radius:10px;
+background:#6c5ce7;
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#4834d4;
+}
+
+#weatherResult{
+margin-top:20px;
+}
+
+#weatherResult p{
+margin:5px 0;
+font-size:14px;
+}
+
+.weather-icon{
+width:100px;
+margin:10px 0;
+animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform: translateY(0);}
+50%{transform: translateY(-10px);}
+100%{transform: translateY(0);}
+}
